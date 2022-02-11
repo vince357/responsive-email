@@ -1,0 +1,14 @@
+{
+  "name": "responsive-email",
+  "version": "1.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:vince357/responsive-email.git",
+  "author": "Vincent de La Fonchais <vdelafonchais@itnetwork.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "scripts": {
+    "dev": "node-sass --watch ./scss -o ./css"
+  }
+}
