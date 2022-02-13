@@ -1,10 +1,9 @@
 $primary-color: #0c2e68;
 $secondary-color: #e62b76;
-p,
-div,
-table,
+$light-grey: #EFEFEF;
+$black: #333333;
 a {
-  color: $primary-color;
+  color: $secondary-color;
 }
 table {
   border-collapse: collapse;
@@ -17,6 +16,7 @@ img {
   display: inline-block;
   border: none;
   max-width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -38,12 +38,30 @@ body {
 * {
   font-family: sans-serif;
 }
+p,
+li {
+  line-height: 1.5;
+}
+h2 {
+  font-weight: normal;
+  color: $primary-color;
+  font-size: 1.6666em;
+  font-weight: 300;
+  margin-top: 0;
+}
+h3 {
+  color: $primary-color;
+  font-weight: 300;
+  margin-top: 0;
+}
+
 .body-wrap {
   width: 100%;
   border-spacing: 0;
 }
 .body-container {
-  background-color: #f0f0f0;
+  background-color: #DEDBDB;
+  color: $black;
   border-spacing: 0;
 }
 .main-table {
@@ -51,6 +69,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   border-spacing: 0;
+  box-shadow: 0 0 1em rgba(0,0,0,.2);
 }
 .insider-margins {
   margin: 0 1em;
@@ -59,14 +78,94 @@ body {
 // NAV
 .nav {
   width: 100%;
+  font-size: 12px;
   td {
     text-align: center;
-    font-weight: bold;
     padding: 1em 0;
   }
   a {
     text-decoration: none;
     text-transform: uppercase;
-    color: inherit;
+    color: $primary-color;
+  }
+}
+
+.slice {
+  padding: 1em;
+  border-top: solid 1px transparent;
+  border-bottom: solid 3px $secondary-color;
+}
+.slice--grey {
+  background-color: $light-grey;
+}
+.slice--dark {
+  background-color: $primary-color;
+  color: white;
+  a {
+    color: white !important;
+  }
+}
+table.three-columns {
+  width: 100%;
+}
+td.col {
+  vertical-align: top;
+  padding-right: 1em;
+}
+@media (max-width: 480px) {
+  table.three-columns {
+    display: block;
+    tr {
+      display: block;
+    }
+    td {
+      display: block;
+      padding-right: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+  }
+}
+
+ul {
+  margin-top: 0;
+}
+
+.text-white {
+  color: white;
+}
+
+.funds-link {
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 1em;
+}
+
+ul.teams {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    width: 30%;
+    margin-left: .5%;
+    margin-right: .5%;
+    margin-bottom: 1em;
+    @media (max-width: 480px) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 2em;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  img {
+    margin-bottom: 1em;
   }
 }
